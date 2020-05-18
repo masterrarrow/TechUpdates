@@ -1,0 +1,84 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.nav-bar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.nav-wrapper {
+  padding: 0 2rem;
+}
+
+.container {
+  padding-top: 4rem;
+}
+
+.article-title {
+  font-size: large;
+}
+
+.text-center {
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.description {
+  margin-top: 3px;
+}
+
+.border-top {
+  margin-top: 4px;
+  border-top: black;
+  font-size: large;
+}
+
+.error {
+  margin-left: 3rem;
+}
+
+.back-btn {
+  margin-right: 1.5rem;
+}
+
+.delete_user {
+  color: red;
+  border: none;
+  background: none;
+}
+
+.delete_user:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete_user:focus {
+  background: none;
+}
+
+.alert {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 0, 0, .2);
+  color: darkred;
+}
+
+.success {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(32, 255, 25, .2);
+  color: darkgreen;
+}

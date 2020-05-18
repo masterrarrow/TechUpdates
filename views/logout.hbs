@@ -1,0 +1,13 @@
+<h3>Are you sure you want to logout?</h3>
+
+<div class="row">
+    <form id="logout_form" class="col s12" method="POST">
+        <input type="hidden" name="_csrf" value="{{csrf}}"/>
+        <a class="btn waves-effect waves-light back-btn" href="/" type="reset">
+            <i class="material-icons left">arrow_back</i>Back
+        </a>
+        <button class="btn waves-effect waves-light red darken-1" type="submit" name="action">Logout
+            <i class="material-icons right">exit_to_app</i>
+        </button>
+    </form>
+</div>

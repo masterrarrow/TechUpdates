@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="eng">
+    {{> header }}
+    <body>
+        {{> navbar }}
+        <div class="container">
+            {{#if messages.error }}
+                <div id="alert" class="alert">{{messages.error}}</div>
+            {{/if}}
+            {{#if messages.success }}
+                <div id="alert" class="success">{{messages.success}}</div>
+            {{/if}}
+            {{{ body }}}
+        </div>
+        {{> footer }}
+    </body>
+</html>

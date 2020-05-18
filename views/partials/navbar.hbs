@@ -1,0 +1,48 @@
+<nav class="nav-bar">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Tech news</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {{#if isHome}}
+                <li class="active"><a href="/">All</a></li>
+            {{else}}
+                <li><a href="/">All</a></li>
+            {{/if}}
+
+            {{#if isInsight}}
+                <li class="active"><a href="/insight">Insight</a></li>
+            {{else}}
+                <li><a href="/insight">Insight</a></li>
+            {{/if}}
+
+            {{#if isVerge}}
+                <li class="active"><a href="/theverge">The Verge</a></li>
+            {{else}}
+                <li><a href="/theverge">The Verge</a></li>
+            {{/if}}
+            <li>|</li>
+            {{#if isAuthenticated}}
+                {{#if isProfile}}
+                    <li class="active"><a href="/profile">Profile</a></li>
+                {{else}}
+                    <li><a href="/profile">Profile</a></li>
+                {{/if}}
+                {{#if isLogout}}
+                    <li class="active"><a href="/logout">Logout</a></li>
+                {{else}}
+                    <li><a href="/logout">Logout</a></li>
+                {{/if}}
+            {{else}}
+                {{#if isLogin}}
+                    <li class="active"><a href="/login">Login</a></li>
+                {{else}}
+                    <li><a href="/login">Login</a></li>
+                {{/if}}
+                {{#if isRegister}}
+                    <li class="active"><a href="/register">Register</a></li>
+                {{else}}
+                    <li><a href="/register">Register</a></li>
+                {{/if}}
+            {{/if}}
+        </ul>
+    </div>
+</nav>

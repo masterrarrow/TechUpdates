@@ -1,0 +1,21 @@
+<h4 class="mt-4">{{information}}</h4>
+<br/>
+
+{{#if articles.length}}
+    <ul class="collapsible">
+    {{#each articles}}
+        <li>
+            <div class="collapsible-header article-title"><i class="material-icons">filter_drama</i>{{title}}</div>
+            <div class="collapsible-body">
+                {{#if @root/isAuthenticated}}
+                    <a class="article-title" href="{{link}}" target="_blank">Read more on {{journal}}</a>
+                {{else}}
+                    <a class="article-title" href="/login">Login to read more</a>
+                {{/if}}
+                <p>{{text}}</p>
+            </div>
+        </li>
+    {{/each}}
+{{else}}
+    <p style="font-size: large">No articles found</p>
+{{/if}}

@@ -1,0 +1,48 @@
+{{#if messages.error }}
+    <div id="alert" class="alert">{{messages.error}}</div>
+{{/if}}
+
+<div class="row">
+    <h3>{{user.username}} profile</h3>
+    <form id="del_account" action="/profile/delete?_method=DELETE" method="POST">
+        <input type="hidden" name="_csrf" value="{{csrf}}"/>
+        <button class="delete_user" type="submit" name="action">Delete profile</button>
+    </form>
+</div>
+
+<div class="row">
+    <form id="profile_form" class="col s12" method="POST">
+        <input type="hidden" name="_csrf" value="{{csrf}}"/>
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">person</i>
+                <input name="first_name" value="{{user.first_name}}" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+                <span style="color: red" class="helper-text error" data-error="Enter valid first name" id="first_name_error"></span>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">person</i>
+                <input name="last_name" value="{{user.last_name}}" id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+                <span style="color: red" class="helper-text error" data-error="Enter valid last name" id="last_name_error"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">label</i>
+                <input name="username" value="{{user.username}}" id="username" type="text" class="validate" required>
+                <label for="username">Username</label>
+                <span style="color: red" class="helper-text error" data-error="Enter username" id="username_error"></span>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">mail</i>
+                <input name="email" value="{{user.email}}" id="email" type="email" class="validate" required>
+                <label for="email">Email</label>
+                <span style="color: red" class="helper-text error" data-error="Enter email" id="email_error"></span>
+            </div>
+        </div>
+        <button class="right btn waves-effect waves-light" type="submit" name="action">Save changes
+            <i class="material-icons right">mode_edit</i>
+        </button>
+    </form>
+</div>

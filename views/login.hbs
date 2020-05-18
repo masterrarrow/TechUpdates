@@ -1,0 +1,30 @@
+<h2>{{title}}</h2>
+
+<div class="row">
+    <form id="login_form" class="col s12" method="POST">
+        <input type="hidden" name="_csrf" value="{{csrf}}"/>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">mail</i>
+            <input name="email" id="user_email" type="email" class="validate" required>
+            <label for="user_email">Email</label>
+            <span class="helper-text error" data-error="Enter email"></span>
+        </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">lock</i>
+            <input name="password" id="user_password" type="password" class="validate" required>
+            <label for="user_password">Password</label>
+            <span class="helper-text error" data-error="Enter password"></span>
+        </div>
+        <button class="right btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+        <small>
+            Need An Account? <a href="/register">Register now</a>
+        </small>
+        <br/>
+        <br/>
+        <small>
+            <a href="/password-reset" style="color: red">Forgot Password?</a>
+        </small>
+    </form>
+</div>
